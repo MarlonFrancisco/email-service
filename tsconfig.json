@@ -1,0 +1,11 @@
+{
+    "exclude": ["node_modules/"],
+    "include": ["lib/"],
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es6",
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "resolveJsonModule": true
+    }
+}
