@@ -14,14 +14,23 @@ export default class Mailer {
         private service: string,
     ) {}
 
-    public async sender(
+    /**
+     * Sender email
+     *
+     * @param {string} templatePath 
+     * @param {IField[]} fields
+     * @param {string} subject
+     * @param {string} recipient
+     * @returns { Promise<any> }
+     * @memberof Mailer
+     */
+    public sender(
         templatePath: string,
         fields: IField[],
         subject: string,
         recipient: string,
-    ) {
+    ): Promise<any> {
         const template = PrepareTemplate.replaceFields(templatePath, fields);
-
         return this.transfer.send(template, subject, recipient);
     }
 }
