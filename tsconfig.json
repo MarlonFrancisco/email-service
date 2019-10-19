@@ -1,6 +1,6 @@
 {
-    "exclude": ["node_modules/"],
-    "include": ["lib/"],
+    "exclude": ["node_modules"],
+    "include": ["lib"],
     "compilerOptions": {
         "module": "commonjs",
         "target": "es6",

@@ -13,7 +13,7 @@ export interface IField {
     value: string;
 }
 
-export default class PrepareMail {
+export default class PrepareTemplate {
     /**
      * Prepare template for sending
      *
@@ -21,7 +21,7 @@ export default class PrepareMail {
      * @param {string} templatePath path to template
      * @param {IField[]} fields fields for replace in template
      * @returns {string} template
-     * @memberof PrepareMail
+     * @memberof PrepareTemplate
      */
     public static replaceFields(templatePath: string, fields: IField[]): string {
         const template = this.getTemplate(templatePath);
@@ -39,7 +39,7 @@ export default class PrepareMail {
      * @static
      * @param {string} path path to template
      * @returns {string} template as string
-     * @memberof PrepareMail
+     * @memberof PrepareTemplate
      */
     public static getTemplate(path: string): string {
         return readFileSync(path, {

@@ -16,15 +16,20 @@ export default class TranferMailer {
         private email: string,
         private password: string,
         private service: string,
-        private subject: string,
-        private recipient: string,
     ) {}
 
-    public send(template: string): Promise<SentMessageInfo> {
+    /**
+     * Send email
+     *
+     * @param {string} template
+     * @returns {Promise<SentMessageInfo>}
+     * @memberof TranferMailer
+     */
+    public send(template: string, subject: string, recipient: string): Promise<SentMessageInfo> {
         return this.transporter.sendMail({
             from: this.email,
-            subject: this.subject,
-            to: this.recipient,
+            subject,
+            to: recipient,
             html: template,
         });
     }
