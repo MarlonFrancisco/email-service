@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "gulp watch"
+    "watch": "gulp clean && gulp compile && gulp watch",
+    "build": "gulp clean && gulp compile"
   },
   "keywords": [],
   "author": "",
