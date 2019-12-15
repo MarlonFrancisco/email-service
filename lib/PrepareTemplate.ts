@@ -24,12 +24,10 @@ export default class PrepareTemplate {
      * @memberof PrepareTemplate
      */
     public static replaceFields(templatePath: string, fields: IField[]): string {
-        const template = this.getTemplate(templatePath);
-
-        fields.map((field) => {
-            template.replace(`%%${field.name}%%`, field.value);
+        let template = this.getTemplate(templatePath);
+        fields.forEach((field) => {
+            template = template.replace(`%%${field.name}%%`, field.value);
         });
-
         return template;
     }
 

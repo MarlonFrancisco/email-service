@@ -9,7 +9,6 @@ export default class TranferMailer {
             user: this.email,
             pass: this.password,
         },
-        tls: { rejectUnauthorized: false },
     });
 
     constructor(

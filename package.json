@@ -1,8 +1,8 @@
 {
-  "name": "email-sender",
-  "version": "1.0.0",
+  "name": "jezzmailer",
+  "version": "1.0.4",
   "description": "",
-  "main": "index.js",
+  "main": "Mailer.ts",
   "scripts": {
     "watch": "gulp clean && gulp compile && gulp watch",
     "build": "gulp clean && gulp compile"
@@ -19,7 +19,6 @@
     "typescript": "^3.6.4"
   },
   "dependencies": {
-    "node-mailer": "^0.1.1",
     "nodemailer": "^6.3.1"
   }
 }
